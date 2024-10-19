@@ -3,6 +3,9 @@
 library(tidyverse)
 library(openxlsx)
 
+# Use Github
+use_github()
+
 # Read in data, some cleanup for personal preference
 monsters <- read.xlsx("data/5e_monsters.xlsx", "Official Stats") %>% 
   rename_with(tolower) %>% 
@@ -11,5 +14,4 @@ monsters <- read.xlsx("data/5e_monsters.xlsx", "Official Stats") %>%
                           paste0("walk ", speeds), # If True
                           speeds)) # If False
 
-## 
 
